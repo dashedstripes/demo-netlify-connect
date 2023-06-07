@@ -47,7 +47,7 @@ const Home: React.FC<{ data: any }>  = ({ data }) => {
         <img src="/hero.png" alt="hero" className='w-full'/>
 
         <div className='py-6'>
-          <h2 className='text-2xl'>Recent News</h2>
+          <h2 className='text-2xl'>Recent News and Articles!</h2>
 
           <div className='grid grid-cols-3 gap-8 py-6'>
             {data?.map((item: any) => (
