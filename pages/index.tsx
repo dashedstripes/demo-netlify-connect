@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
 export async function getStaticProps() {
   const QUERY = `
     query AllDrupalNodeArticle {
@@ -13,10 +14,11 @@ export async function getStaticProps() {
     }
   `;
 
-  const res = await fetch('https://adam-drupal-7tkaj7-prod.valhalla-api.io/', {
+  const res = await fetch('https://adam-data-lay-ee3lsr-prod.api.netlify-connect.com/', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
+      'Authorization': `Bearer ${process.env.NETLIFY_CONNECT_TOKEN}`
     },
     body: JSON.stringify({
       query: QUERY
